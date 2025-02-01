@@ -1,17 +1,16 @@
-// src/firebase.js
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA-kZ1144R13wABRnhy8kZXq5t6ieZoRm4",
-    authDomain: "karigar-b8e10.firebaseapp.com",
-    projectId: "karigar-b8e10",
-    storageBucket: "karigar-b8e10.firebasestorage.app",
-    messagingSenderId: "246356306783",
-    appId: "1:246356306783:web:6a04c6ba108f4dff4924ea"
-  };
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
